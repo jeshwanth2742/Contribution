@@ -14,6 +14,30 @@
       padding: 0;
     }
 
+    /* Top-right logo */
+    .logo {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #4da6ff;
+    }
+
+    .logo span {
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #4da6ff;
+    }
+
+    /* General icons */
     .icon {
       display: inline-block;
       margin: 20px;
@@ -61,38 +85,61 @@
       border-radius: 8px;
     }
 
+    /* Colorful buttons */
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       margin: 10px;
-      background: #444;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s;
+      font-weight: bold;
+      transition: transform 0.2s, opacity 0.2s;
     }
 
     .button:hover {
-      background: #666;
+      transform: scale(1.05);
+      opacity: 0.9;
     }
 
+    .blue { background: #007bff; color: #fff; }
+    .green { background: #28a745; color: #fff; }
+    .purple { background: #6f42c1; color: #fff; }
+    .orange { background: #fd7e14; color: #fff; }
+
     a {
-      color: #4da6ff;
+      color: #fff;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #222;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #4da6ff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Top-right logo -->
+  <div class="logo">
+    <img src="assets/logo.png" alt="My Anoma Contribution">
+    <span>My Anoma Contribution</span>
+  </div>
+
   <!-- Home Section -->
   <div id="home" class="section active">
-    <div class="icon">
-      <img src="assets/logo.png" alt="My Anoma Contribution">
-      <span>My Anoma Contribution</span>
-    </div>
     <div>
       <div class="icon">
         <img src="assets/meme.png" alt="Anoma Memes" onclick="showSection('memes')">
@@ -113,9 +160,9 @@
   <div id="memes" class="section">
     <h2>Anoma Memes</h2>
     <div>
-      <span class="button" onclick="toggleMemes('created')">Created Memes</span>
-      <span class="button" onclick="toggleMemes('collected')">Collected Memes</span>
-      <span class="button" onclick="showSection('home')">⬅ Back</span>
+      <span class="button blue" onclick="toggleMemes('created')">Created Memes</span>
+      <span class="button green" onclick="toggleMemes('collected')">Collected Memes</span>
+      <span class="button orange" onclick="showSection('home')">⬅ Back</span>
     </div>
 
     <!-- Created Memes -->
@@ -146,7 +193,7 @@
       <img src="assets/twentythree.png.jpg" alt="Meme twentythree">
     </div>
 
-     <!-- Collected Memes -->
+    <!-- Collected Memes -->
     <div id="collectedMemes" class="memes-grid" style="display:none;">
       <!-- 49 collected memes -->
       <!-- Example first 9 -->
@@ -179,11 +226,11 @@
   <!-- Intent Games Section -->
   <div id="games" class="section">
     <h2>Intent Games</h2>
-    <ul>
-      <li><a href="YOUR_INTENT_CLICKER_LINK" target="_blank">Intent Clicker</a></li>
-      <li><a href="YOUR_MAGE_SOLVER_LINK" target="_blank">Mage Solver</a></li>
-    </ul>
-    <span class="button" onclick="showSection('home')">⬅ Back</span>
+    <div>
+      <a href="YOUR_INTENT_CLICKER_LINK" target="_blank" class="button purple">Intent Clicker</a>
+      <a href="YOUR_MAGE_SOLVER_LINK" target="_blank" class="button green">Mage Solver</a>
+    </div>
+    <span class="button orange" onclick="showSection('home')">⬅ Back</span>
   </div>
 
   <!-- Tweets Section -->
@@ -283,6 +330,10 @@
     </ul>
     <span class="button" onclick="showSection('home')">⬅ Back</span>
   </div>
+  <!-- Footer -->
+  <footer>
+    Built by <a href="https://x.com/undef112174?t=cV1KWhidgJpVjyMS_6lHqQ&s=09" target="_blank">@Xiipher</a>
+  </footer>
 
   <script>
     function showSection(id) {
