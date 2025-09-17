@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Anoma Contributions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      max-width: 200px;
+      cursor: pointer;
+      margin: 20px;
+    }
+    .section {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+    .memes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .memes-grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background: #444;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #666;
+    }
+    a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Section -->
+  <div id="home" class="section active">
+    <img src="assets/logo.png" alt="My Anoma Contribution">
+    <div>
+      <img src="assets/meme.png" alt="Anoma Memes" onclick="showSection('memes')">
+      <img src="assets/game.png" alt="Intent Games" onclick="showSection('games')">
+      <img src="assets/twitter.png" alt="My X Contribution" onclick="showSection('tweets')">
+    </div>
+  </div>
+
+  <!-- Anoma Memes Section -->
+  <div id="memes" class="section">
+    <h2>Anoma Memes</h2>
+    <div>
+      <span class="button" onclick="toggleMemes('created')">Created Memes</span>
+      <span class="button" onclick="toggleMemes('collected')">Collected Memes</span>
+      <span class="button" onclick="showSection('home')">⬅ Back</span>
+    </div>
+
+    <!-- Created Memes -->
+    <div id="createdMemes" class="memes-grid" style="display:none;">
+      <img src="assets/one.png.jpg" alt="Meme one">
+      <img src="assets/two.png.jpg" alt="Meme two">
+      <img src="assets/three.png.jpg" alt="Meme three">
+      <img src="assets/four.png.jpg" alt="Meme four">
+      <img src="assets/five.png.jpg" alt="Meme five">
+      <img src="assets/six.png.jpg" alt="Meme six">
+      <img src="assets/seven.png.jpg" alt="Meme seven">
+      <img src="assets/eight.png.jpg" alt="Meme eight">
+      <img src="assets/nine.png.jpg" alt="Meme nine">
+      <img src="assets/ten.png.jpg" alt="Meme ten">
+      <img src="assets/eleven.png.jpg" alt="Meme eleven">
+      <img src="assets/twelve.png.jpg" alt="Meme twelve">
+      <img src="assets/thirteen.png.jpg" alt="Meme thirteen">
+      <img src="assets/fourteen.png.jpg" alt="Meme fourteen">
+      <img src="assets/fifteen.png.jpg" alt="Meme fifteen">
+      <img src="assets/sixteen.png.jpg" alt="Meme sixteen">
+      <img src="assets/seventeen.png.jpg" alt="Meme seventeen">
+      <img src="assets/eighteen.png.jpg" alt="Meme eighteen">
+      <img src="assets/nineteen.png.jpg" alt="Meme nineteen">
+      <img src="assets/twenty.png.jpg" alt="Meme twenty">
+      <img src="assets/twentyone.png.jpg" alt="Meme twentyone">
+      <img src="assets/twentytwo.png.jpg" alt="Meme twentytwo">
+      <img src="assets/twentythree.png.jpg" alt="Meme twentythree">
+    </div>
+
+    <!-- Collected Memes -->
+    <div id="collectedMemes" class="memes-grid" style="display:none;">
+      <!-- 49 collected memes -->
+      <!-- Example first 9 -->
+      <img src="assets1/1.png" alt="Collected meme 1">
+      <img src="assets1/4.png" alt="Collected meme 4">
+      <img src="assets1/7.png" alt="Collected meme 7">
+      <!-- Continue until 49.png -->
+      <img src="assets1/10.png" alt="Collected meme 10">
+      <img src="assets1/12.png" alt="Collected meme 12">
+      <img src="assets1/16.png" alt="Collected meme 16">
+      <img src="assets1/18.png" alt="Collected meme 18">
+      <img src="assets1/20.png" alt="Collected meme 20">
+      <img src="assets1/21.png" alt="Collected meme 21">
+      <img src="assets1/22.png" alt="Collected meme 22">
+      <img src="assets1/26.png" alt="Collected meme 26">
+      <img src="assets1/27.png" alt="Collected meme 27">
+      <img src="assets1/30.png" alt="Collected meme 30">
+      <img src="assets1/31.png" alt="Collected meme 31">
+      <img src="assets1/32.png" alt="Collected meme 32">
+      <img src="assets1/34.png" alt="Collected meme 34">
+      <img src="assets1/35.png" alt="Collected meme 35">
+      <img src="assets1/36.png" alt="Collected meme 36">
+      <img src="assets1/39.png" alt="Collected meme 39">
+      <img src="assets1/40.png" alt="Collected meme 40">
+      <img src="assets1/43.png" alt="Collected meme 43">
+      <img src="assets1/49.png" alt="Collected meme 49">
+    </div>
+  </div>
+
+  <!-- Intent Games Section -->
+  <div id="games" class="section">
+    <h2>Intent Games</h2>
+    <ul>
+      <li><a href="YOUR_INTENT_CLICKER_LINK" target="_blank">Intent Clicker</a></li>
+      <li><a href="YOUR_MAGE_SOLVER_LINK" target="_blank">Mage Solver</a></li>
+    </ul>
+    <span class="button" onclick="showSection('home')">⬅ Back</span>
+  </div>
+
+  <!-- Tweets Section -->
+  <div id="tweets" class="section">
+    <h2>My X Contribution</h2>
+    <ul style="text-align:left; max-width:600px; margin:auto;">
+      <li><a href="https://x.com/undef112174/status/1967983845887955163" target="_blank">Tweet 1</a></li>
+      <li><a href="https://x.com/undef112174/status/1956321587705295082" target="_blank">Tweet 2</a></li>
+      <li><a href="https://x.com/undef112174/status/1956998649935974407" target="_blank">Tweet 3</a></li>
+      <li><a href="https://x.com/undef112174/status/1956227027574645056" target="_blank">Tweet 4</a></li>
+      <li><a href="https://x.com/undef112174/status/1967968709089300990" target="_blank">Tweet 5</a></li>
+      <li><a href="https://x.com/undef112174/status/1965683195644706956" target="_blank">Tweet 6</a></li>
+      <li><a href="https://x.com/undef112174/status/1965307222986236172" target="_blank">Tweet 7</a></li>
+      <li><a href="https://x.com/undef112174/status/1964586615814443169" target="_blank">Tweet 8</a></li>
+      <li><a href="https://x.com/undef112174/status/1955529904428335605" target="_blank">Tweet 9</a></li>
+      <li><a href="https://x.com/undef112174/status/1955185772992270509" target="_blank">Tweet 10</a></li>
+      <li><a href="https://x.com/undef112174/status/1955077310132129833" target="_blank">Tweet 11</a></li>
+      <li><a href="https://x.com/undef112174/status/1956638310102946190" target="_blank">Tweet 12</a></li>
+      <li><a href="https://x.com/undef112174/status/1965190364840820764" target="_blank">Tweet 13</a></li>
+      <li><a href="https://x.com/undef112174/status/1953312412935069998" target="_blank">Tweet 14</a></li>
+      <li><a href="https://x.com/undef112174/status/1965774074480820536" target="_blank">Tweet 15</a></li>
+      <li><a href="https://x.com/undef112174/status/1954825660469248028" target="_blank">Tweet 16</a></li>
+      <li><a href="https://x.com/undef112174/status/1966533094229352723" target="_blank">Tweet 17</a></li>
+      <li><a href="https://x.com/undef112174/status/1954469781316252100" target="_blank">Tweet 18</a></li>
+      <li><a href="https://x.com/undef112174/status/1966385845235286348" target="_blank">Tweet 19</a></li>
+      <li><a href="https://x.com/undef112174/status/1956003729947419132" target="_blank">Tweet 20</a></li>
+      <li><a href="https://x.com/undef112174/status/1954119140031033628" target="_blank">Tweet 21</a></li>
+      <li><a href="https://x.com/undef112174/status/1966764388955672967" target="_blank">Tweet 22</a></li>
+      <li><a href="https://x.com/undef112174/status/1954382382842421250" target="_blank">Tweet 23</a></li>
+      <li><a href="https://x.com/undef112174/status/1966762200510722402" target="_blank">Tweet 24</a></li>
+      <li><a href="https://x.com/undef112174/status/1953409583919030522" target="_blank">Tweet 25</a></li>
+      <li><a href="https://x.com/undef112174/status/1956005338672718069" target="_blank">Tweet 26</a></li>
+      <li><a href="https://x.com/undef112174/status/1967130313534173673" target="_blank">Tweet 27</a></li>
+      <li><a href="https://x.com/undef112174/status/1952972709530616327" target="_blank">Tweet 28</a></li>
+      <li><a href="https://x.com/undef112174/status/1967513356237263130" target="_blank">Tweet 29</a></li>
+      <li><a href="https://x.com/undef112174/status/1952949043434602737" target="_blank">Tweet 30</a></li>
+      <li><a href="https://x.com/undef112174/status/1952898756732740022" target="_blank">Tweet 31</a></li>
+      <li><a href="https://x.com/undef112174/status/1950906069930381535" target="_blank">Tweet 32</a></li>
+      <li><a href="https://x.com/undef112174/status/1952634787778236690" target="_blank">Tweet 33</a></li>
+      <li><a href="https://x.com/undef112174/status/1967482800526983594" target="_blank">Tweet 34</a></li>
+      <li><a href="https://x.com/undef112174/status/1950808893329920377" target="_blank">Tweet 35</a></li>
+      <li><a href="https://x.com/undef112174/status/1965190238244089976" target="_blank">Tweet 36</a></li>
+      <li><a href="https://x.com/undef112174/status/1950138814271238398" target="_blank">Tweet 37</a></li>
+      <li><a href="https://x.com/undef112174/status/1964945910762475968" target="_blank">Tweet 38</a></li>
+      <li><a href="https://x.com/undef112174/status/1964592727049589072" target="_blank">Tweet 39</a></li>
+      <li><a href="https://x.com/undef112174/status/1964385232112738393" target="_blank">Tweet 40</a></li>
+      <li><a href="https://x.com/undef112174/status/1964384149659390369" target="_blank">Tweet 41</a></li>
+      <li><a href="https://x.com/undef112174/status/1964298302498746456" target="_blank">Tweet 42</a></li>
+      <li><a href="https://x.com/undef112174/status/1964225656088383650" target="_blank">Tweet 43</a></li>
+      <li><a href="https://x.com/undef112174/status/1963864669082489316" target="_blank">Tweet 44</a></li>
+      <li><a href="https://x.com/undef112174/status/1963501084070351144" target="_blank">Tweet 45</a></li>
+      <li><a href="https://x.com/undef112174/status/1963260196958204378" target="_blank">Tweet 46</a></li>
+      <li><a href="https://x.com/undef112174/status/1962764773457830395" target="_blank">Tweet 47</a></li>
+      <li><a href="https://x.com/undef112174/status/1962398175903551855" target="_blank">Tweet 48</a></li>
+      <li><a href="https://x.com/undef112174/status/1962032494523699581" target="_blank">Tweet 49</a></li>
+      <li><a href="https://x.com/undef112174/status/1961571076724723859" target="_blank">Tweet 50</a></li>
+      <li><a href="https://x.com/undef112174/status/1961055365245911550" target="_blank">Tweet 51</a></li>
+      <li><a href="https://x.com/undef112174/status/1960548646690414712" target="_blank">Tweet 52</a></li>
+      <li><a href="https://x.com/undef112174/status/1960580429922381910" target="_blank">Tweet 53</a></li>
+      <li><a href="https://x.com/undef112174/status/1960348060397273577" target="_blank">Tweet 54</a></li>
+     <li><a href="https://x.com/undef112174/status/1960122586089787576" target="_blank">Tweet 55</a></li>
+     <li><a href="https://x.com/undef112174/status/1960025890408349954" target="_blank">Tweet 56</a></li>
+     <li><a href="https://x.com/undef112174/status/1959974293384900841" target="_blank">Tweet 57</a></li>
+     <li><a href="https://x.com/undef112174/status/1959917549468233912" target="_blank">Tweet 58</a></li>
+     <li><a href="https://x.com/undef112174/status/1959920005203755365" target="_blank">Tweet 59</a></li>
+     <li><a href="https://x.com/undef112174/status/1959838444705960197" target="_blank">Tweet 60</a></li>
+     <li><a href="https://x.com/undef112174/status/1959663306551280069" target="_blank">Tweet 61</a></li>
+     <li><a href="https://x.com/undef112174/status/1959758913982824674" target="_blank">Tweet 62</a></li>
+     <li><a href="https://x.com/undef112174/status/1959754042231660831" target="_blank">Tweet 63</a></li>
+     <li><a href="https://x.com/undef112174/status/1959509132748435667" target="_blank">Tweet 64</a></li>
+     <li><a href="https://x.com/undef112174/status/1959250426408435842" target="_blank">Tweet 65</a></li>
+     <li><a href="https://x.com/undef112174/status/1949835685655118260" target="_blank">Tweet 66</a></li>
+     <li><a href="https://x.com/undef112174/status/1958786404005142971" target="_blank">Tweet 67</a></li>
+     <li><a href="https://x.com/undef112174/status/1949830181918798076" target="_blank">Tweet 68</a></li>
+     <li><a href="https://x.com/undef112174/status/1949727404727128255" target="_blank">Tweet 69</a></li>
+     <li><a href="https://x.com/undef112174/status/1948995198618665007" target="_blank">Tweet 70</a></li>
+     <li><a href="https://x.com/undef112174/status/1948927574178234760" target="_blank">Tweet 71</a></li>
+     <li><a href="https://x.com/undef112174/status/1948314287400698326" target="_blank">Tweet 72</a></li>
+     <li><a href="https://x.com/undef112174/status/1958867141521817849" target="_blank">Tweet 73</a></li>
+     <li><a href="https://x.com/undef112174/status/1949337556807512103" target="_blank">Tweet 74</a></li>
+     <li><a href="https://x.com/undef112174/status/1956003729947419132" target="_blank">Tweet 75</a></li>
+     <li><a href="https://x.com/undef112174/status/1957121233251877031" target="_blank">Tweet 76</a></li>
+     <li><a href="https://x.com/undef112174/status/1949005763793342551" target="_blank">Tweet 77</a></li>
+     <li><a href="https://x.com/undef112174/status/1948632800325980193" target="_blank">Tweet 78</a></li>
+     <li><a href="https://x.com/undef112174/status/1949494080024822088" target="_blank">Tweet 79</a></li>
+     <li><a href="https://x.com/undef112174/status/1958392725402943869" target="_blank">Tweet 80</a></li>
+     <li><a href="https://x.com/undef112174/status/1957414322902319177" target="_blank">Tweet 81</a></li>
+     <li><a href="https://x.com/undef112174/status/1957437121595396199" target="_blank">Tweet 82</a></li>
+     <li><a href="https://x.com/undef112174/status/1955897006960075253" target="_blank">Tweet 83</a></li>
+     <li><a href="https://x.com/undef112174/status/1949840921752998177" target="_blank">Tweet 84</a></li>
+     <li><a href="https://x.com/undef112174/status/1957363336083038420" target="_blank">Tweet 85</a></li>
+     <li><a href="https://x.com/undef112174/status/1957712311768256890" target="_blank">Tweet 86</a></li>
+     <li><a href="https://x.com/undef112174/status/1958036290131357924" target="_blank">Tweet 87</a></li>
+     <li><a href="https://x.com/undef112174/status/1959481731649884603" target="_blank">Tweet 88</a></li>
+     <li><a href="https://x.com/undef112174/status/1959975707054145617" target="_blank">Tweet 89</a></li>
+     <li><a href="https://x.com/undef112174/status/1947736447215423885" target="_blank">Tweet 90</a></li>           
+    </ul>
+    <span class="button" onclick="showSection('home')">⬅ Back</span>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function toggleMemes(type) {
+      document.getElementById("createdMemes").style.display = "none";
+      document.getElementById("collectedMemes").style.display = "none";
+      if (type === "created") {
+        document.getElementById("createdMemes").style.display = "grid";
+      } else {
+        document.getElementById("collectedMemes").style.display = "grid";
+      }
+    }
+  </script>
+
+</body>
+</html>
