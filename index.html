@@ -7,7 +7,6 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
       background: #111;
       color: #fff;
       margin: 0;
@@ -15,13 +14,12 @@
     }
 
     /* Top-left logo */
-.logo {
-  position: absolute;
-  top: 15px;
-  left: 20px;   /* changed from right → left */
-  text-align: center;
-}
-
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      text-align: center;
+    }
 
     .logo img {
       width: 80px;
@@ -41,7 +39,7 @@
     /* General icons */
     .icon {
       display: inline-block;
-      margin: 20px;
+      text-align: center;
     }
 
     .icon img {
@@ -66,6 +64,7 @@
       color: #4da6ff;
     }
 
+    /* Sections */
     .section {
       display: none;
       padding: 20px;
@@ -74,6 +73,25 @@
       display: block;
     }
 
+    /* Center main icons */
+    .center-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* full screen center */
+      gap: 40px;
+    }
+
+    /* Mobile: stack icons */
+    @media (max-width: 768px) {
+      .center-icons {
+        flex-direction: column;
+        height: auto;
+        margin-top: 120px;
+      }
+    }
+
+    /* Memes grid */
     .memes-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -116,19 +134,18 @@
       text-decoration: underline;
     }
 
-    /* Footer always at bottom */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  background: #222;
-  color: #aaa;
-  font-size: 14px;
-  text-align: center;
-}
-
+    /* Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background: #222;
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+    }
 
     footer a {
       color: #4da6ff;
@@ -138,7 +155,7 @@ footer {
 </head>
 <body>
 
-  <!-- Top-right logo -->
+  <!-- Top-left logo -->
   <div class="logo">
     <img src="assets/logo.png" alt="My Anoma Contribution">
     <span>My Anoma Contribution</span>
@@ -146,7 +163,7 @@ footer {
 
   <!-- Home Section -->
   <div id="home" class="section active">
-    <div>
+    <div class="center-icons">
       <div class="icon">
         <img src="assets/meme.png" alt="Anoma Memes" onclick="showSection('memes')">
         <span>Anoma Memes</span>
@@ -171,7 +188,6 @@ footer {
       <span class="button orange" onclick="showSection('home')">⬅ Back</span>
     </div>
 
-    <!-- Created Memes -->
     <!-- Created Memes -->
     <div id="createdMemes" class="memes-grid" style="display:none;">
       <img src="assets/one.png.jpg" alt="Meme one">
@@ -233,8 +249,8 @@ footer {
   <div id="games" class="section">
     <h2>Intent Games</h2>
     <div>
-      <a href="https://anoma-clicker2.vercel.app/" target="_blank" class="button purple">Intent Clicker</a>
-      <a href="https://magesolver.vercel.app/" target="_blank" class="button green">Mage Solver</a>
+      <a href="YOUR_INTENT_CLICKER_LINK" target="_blank" class="button purple">Intent Clicker</a>
+      <a href="YOUR_MAGE_SOLVER_LINK" target="_blank" class="button green">Mage Solver</a>
     </div>
     <span class="button orange" onclick="showSection('home')">⬅ Back</span>
   </div>
@@ -336,6 +352,7 @@ footer {
     </ul>
     <span class="button" onclick="showSection('home')">⬅ Back</span>
   </div>
+
   <!-- Footer -->
   <footer>
     Built by <a href="https://x.com/undef112174?t=cV1KWhidgJpVjyMS_6lHqQ&s=09" target="_blank">@Xiipher</a>
@@ -360,3 +377,4 @@ footer {
 
 </body>
 </html>
+
