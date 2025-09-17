@@ -14,13 +14,14 @@
       padding: 0;
     }
 
-    /* Top-right logo */
-    .logo {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      text-align: center;
-    }
+    /* Top-left logo */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;   /* changed from right → left */
+  text-align: center;
+}
+
 
     .logo img {
       width: 80px;
@@ -115,14 +116,19 @@
       text-decoration: underline;
     }
 
-    /* Footer */
-    footer {
-      margin-top: 40px;
-      padding: 15px;
-      background: #222;
-      color: #aaa;
-      font-size: 14px;
-    }
+    /* Footer always at bottom */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: #222;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+}
+
 
     footer a {
       color: #4da6ff;
@@ -227,8 +233,8 @@
   <div id="games" class="section">
     <h2>Intent Games</h2>
     <div>
-      <a href="YOUR_INTENT_CLICKER_LINK" target="_blank" class="button purple">Intent Clicker</a>
-      <a href="YOUR_MAGE_SOLVER_LINK" target="_blank" class="button green">Mage Solver</a>
+      <a href="https://anoma-clicker2.vercel.app/" target="_blank" class="button purple">Intent Clicker</a>
+      <a href="https://magesolver.vercel.app/" target="_blank" class="button green">Mage Solver</a>
     </div>
     <span class="button orange" onclick="showSection('home')">⬅ Back</span>
   </div>
