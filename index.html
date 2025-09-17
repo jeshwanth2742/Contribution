@@ -13,11 +13,34 @@
       margin: 0;
       padding: 0;
     }
-    img {
-      max-width: 200px;
-      cursor: pointer;
+
+    .icon {
+      display: inline-block;
       margin: 20px;
     }
+
+    .icon img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #4da6ff;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .icon img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #80c1ff;
+    }
+
+    .icon span {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #4da6ff;
+    }
+
     .section {
       display: none;
       padding: 20px;
@@ -25,16 +48,19 @@
     .active {
       display: block;
     }
+
     .memes-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 10px;
       margin-top: 20px;
     }
+
     .memes-grid img {
       width: 100%;
       border-radius: 8px;
     }
+
     .button {
       display: inline-block;
       padding: 10px 20px;
@@ -44,13 +70,16 @@
       cursor: pointer;
       transition: background 0.3s;
     }
+
     .button:hover {
       background: #666;
     }
+
     a {
       color: #4da6ff;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
@@ -60,11 +89,23 @@
 
   <!-- Home Section -->
   <div id="home" class="section active">
-    <img src="assets/logo.png" alt="My Anoma Contribution">
+    <div class="icon">
+      <img src="assets/logo.png" alt="My Anoma Contribution">
+      <span>My Anoma Contribution</span>
+    </div>
     <div>
-      <img src="assets/meme.png" alt="Anoma Memes" onclick="showSection('memes')">
-      <img src="assets/game.png" alt="Intent Games" onclick="showSection('games')">
-      <img src="assets/twitter.png" alt="My X Contribution" onclick="showSection('tweets')">
+      <div class="icon">
+        <img src="assets/meme.png" alt="Anoma Memes" onclick="showSection('memes')">
+        <span>Anoma Memes</span>
+      </div>
+      <div class="icon">
+        <img src="assets/game.png" alt="Intent Games" onclick="showSection('games')">
+        <span>Intent Games</span>
+      </div>
+      <div class="icon">
+        <img src="assets/twitter.png" alt="My X Contribution" onclick="showSection('tweets')">
+        <span>My X Contribution</span>
+      </div>
     </div>
   </div>
 
@@ -77,6 +118,7 @@
       <span class="button" onclick="showSection('home')">⬅ Back</span>
     </div>
 
+    <!-- Created Memes -->
     <!-- Created Memes -->
     <div id="createdMemes" class="memes-grid" style="display:none;">
       <img src="assets/one.png.jpg" alt="Meme one">
@@ -104,7 +146,7 @@
       <img src="assets/twentythree.png.jpg" alt="Meme twentythree">
     </div>
 
-    <!-- Collected Memes -->
+     <!-- Collected Memes -->
     <div id="collectedMemes" class="memes-grid" style="display:none;">
       <!-- 49 collected memes -->
       <!-- Example first 9 -->
